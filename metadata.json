@@ -1,0 +1,6 @@
+{
+  "name": "SwiftRecover - 24/7 Vehicle Recovery",
+  "description": "Professional 24/7 vehicle recovery and breakdown assistance in West London. High-speed response, affordable pricing, and fully insured. Your local emergency towing experts.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": []
+}

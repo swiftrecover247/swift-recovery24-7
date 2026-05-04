@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  
+  --color-emergency-yellow: #FACC15;
+  --color-emergency-red: #EF4444;
+  --color-emergency-dark: #111111;
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-white text-emergency-dark;
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-display font-bold tracking-tight;
+  }
+}
+
+.emergency-gradient {
+  background: linear-gradient(135deg, #FACC15 0%, #EAB308 100%);
+}
+
+/* Pulse animation for CTA */
+@keyframes pulse-red {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+  70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+}
+
+.animate-pulse-red {
+  animation: pulse-red 2s infinite;
+}
